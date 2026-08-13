@@ -1,0 +1,3062 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="دِلوَر | محصولات چوبی با طراحی مدرن">
+<meta name="theme-color" content="#0b0b09">
+
+<title>دِلوَر | محصولات چوبی</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Estedad:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Estedad", sans-serif;
+    background:
+        linear-gradient(
+            rgba(8,8,7,.96),
+            rgba(10,9,8,.98)
+        ),
+        repeating-linear-gradient(
+            165deg,
+            transparent 0,
+            transparent 55px,
+            rgba(125,82,45,.10) 58px,
+            transparent 63px
+        );
+    color: #eee8df;
+    min-height: 100vh;
+    line-height: 1.8;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+
+    background:
+        repeating-linear-gradient(
+            171deg,
+            transparent 0,
+            transparent 90px,
+            rgba(160,108,63,.045) 94px,
+            transparent 100px
+        );
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(7,7,6,.90);
+    backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(210,170,120,.12);
+}
+
+.nav {
+    min-height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    color: #eee2d2;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #9d968e;
+    font-size: 13px;
+    transition: .25s;
+}
+
+.nav-links a:hover {
+    color: #c8a070;
+}
+
+.cart-button {
+    border: 1px solid rgba(207,166,113,.30);
+    background: rgba(255,255,255,.025);
+    color: #eee6db;
+
+    padding: 10px 16px;
+    border-radius: 9px;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: calc(100vh - 78px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.hero-center {
+    width: min(850px, 92%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.small-label {
+    display: block;
+
+    color: #b89568;
+    font-size: 10px;
+    letter-spacing: 4px;
+
+    margin-bottom: 18px;
+}
+
+.hero-center .small-label {
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(44px, 6vw, 78px);
+
+    line-height: 1.25;
+    letter-spacing: -3px;
+
+    font-weight: 700;
+
+    margin: 0;
+}
+
+.hero h1 span {
+    display: block;
+    color: #bd9666;
+    font-weight: 800;
+}
+
+.hero p {
+    max-width: 600px;
+
+    color: #979087;
+    font-size: 14px;
+
+    margin: 25px auto 32px;
+}
+
+.primary-button {
+    display: inline-block;
+
+    background: #bd986a;
+    color: #11100e;
+
+    padding: 13px 25px;
+    border-radius: 9px;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    padding: 100px 0;
+}
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: clamp(30px,4vw,48px);
+    font-weight: 700;
+}
+
+.section-heading p {
+    max-width: 430px;
+
+    color: #858078;
+    font-size: 13px;
+}
+
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.products-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.product-card {
+    overflow: hidden;
+
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.045),
+            rgba(255,255,255,.012)
+        );
+
+    border:
+        1px solid rgba(207,168,116,.12);
+
+    transition: .35s;
+
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+
+    border-color:
+        rgba(207,168,116,.30);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.35);
+}
+
+.product-image {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    background: #11100e;
+
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+.image-placeholder {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #514b45;
+    font-size: 12px;
+}
+
+.product-info {
+    padding: 21px;
+}
+
+.product-info h3 {
+    font-size: 17px;
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+.product-description {
+    min-height: 52px;
+
+    color: #888178;
+    font-size: 12px;
+}
+
+.status {
+    display: inline-block;
+
+    margin: 5px 0 8px;
+
+    padding: 3px 8px;
+
+    border-radius: 5px;
+
+    font-size: 10px;
+}
+
+.available {
+    color: #a9c0a5;
+    background: rgba(80,125,74,.10);
+}
+
+.unavailable {
+    color: #c7a39c;
+    background: rgba(130,70,65,.12);
+}
+
+.product-bottom {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.price {
+    color: #c8a373;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.view-button {
+    padding: 9px 12px;
+
+    border-radius: 8px;
+
+    border:
+        1px solid rgba(201,165,118,.28);
+
+    background: transparent;
+
+    color: #d6bea0;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   IMPORTANT NOTE
+========================= */
+
+.note {
+    display: flex;
+
+    gap: 18px;
+
+    margin-top: 65px;
+    padding: 24px;
+
+    border:
+        1px solid rgba(201,164,116,.16);
+
+    border-radius: 14px;
+
+    background:
+        rgba(255,255,255,.018);
+}
+
+.note-line {
+    width: 2px;
+    flex-shrink: 0;
+
+    background: #bd9769;
+}
+
+.note h3 {
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.note p {
+    color: #938c83;
+    font-size: 12px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns: .8fr 1.2fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.about-visual {
+    aspect-ratio: 1;
+
+    border-radius: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        repeating-linear-gradient(
+            170deg,
+            transparent 0,
+            transparent 45px,
+            rgba(132,89,50,.13) 48px,
+            transparent 52px
+        ),
+        #0d0c0b;
+
+    border:
+        1px solid rgba(204,166,115,.13);
+}
+
+.about-visual span {
+    font-size: 55px;
+    color: #ad895d;
+    font-weight: 800;
+}
+
+.about-text h2 {
+    font-size: clamp(30px,4vw,48px);
+
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #928c84;
+
+    font-size: 14px;
+    line-height: 2.4;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-box {
+    display: grid;
+
+    grid-template-columns: 1fr .8fr;
+
+    gap: 60px;
+
+    padding: 50px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            140deg,
+            rgba(125,84,47,.12),
+            rgba(255,255,255,.02)
+        );
+
+    border:
+        1px solid rgba(201,165,116,.15);
+}
+
+.contact-box h2 {
+    font-size: clamp(30px,4vw,48px);
+    margin-bottom: 18px;
+}
+
+.contact-box p {
+    color: #8f8981;
+    font-size: 13px;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-link {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(0,0,0,.20);
+
+    border:
+        1px solid rgba(255,255,255,.06);
+
+    transition: .25s;
+}
+
+.contact-link:hover {
+    border-color:
+        rgba(201,165,116,.28);
+}
+
+.contact-label {
+    color: #777169;
+    font-size: 10px;
+
+    margin-bottom: 4px;
+}
+
+.contact-link strong {
+    color: #d0aa78;
+    font-size: 15px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 45px 0;
+
+    border-top:
+        1px solid rgba(255,255,255,.06);
+}
+
+.footer {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    color: #706b65;
+    font-size: 11px;
+}
+
+
+/* =========================
+   OVERLAY
+========================= */
+
+.overlay {
+    position: fixed;
+    inset: 0;
+
+    z-index: 3000;
+
+    background:
+        rgba(0,0,0,.72);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: .3s;
+}
+
+.overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================
+   PRODUCT MODAL
+========================= */
+
+.product-modal {
+    position: absolute;
+
+    width: min(850px,94vw);
+    max-height: 92vh;
+
+    overflow-y: auto;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%,-48%)
+        scale(.97);
+
+    background: #11110f;
+
+    border:
+        1px solid rgba(205,169,120,.16);
+
+    border-radius: 20px;
+
+    transition: .3s;
+}
+
+.overlay.open .product-modal {
+    transform:
+        translate(-50%,-50%)
+        scale(1);
+}
+
+.modal-close {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    z-index: 20;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(0,0,0,.65);
+
+    color: white;
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    font-size: 20px;
+}
+
+.modal-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 0;
+}
+
+.modal-gallery {
+    position: relative;
+
+    aspect-ratio: 1;
+
+    background: #0c0c0b;
+
+    overflow: hidden;
+
+    border-radius:
+        20px 0 0 20px;
+}
+
+.modal-gallery img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+.modal-gallery-button {
+    position: absolute;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(0,0,0,.60);
+
+    color: white;
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    z-index: 5;
+}
+
+.modal-prev {
+    right: 12px;
+}
+
+.modal-next {
+    left: 12px;
+}
+
+.modal-content {
+    padding: 40px 32px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content h2 {
+    font-size: 28px;
+
+    line-height: 1.5;
+
+    margin-bottom: 10px;
+}
+
+.modal-description {
+    color: #8e8880;
+
+    font-size: 13px;
+
+    margin: 15px 0 25px;
+}
+
+.modal-price {
+    color: #c9a474;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   OPTIONS
+========================= */
+
+.option-title {
+    color: #aaa39a;
+
+    font-size: 12px;
+
+    margin-bottom: 10px;
+}
+
+.options {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+}
+
+.option-button {
+    padding: 9px 13px;
+
+    border-radius: 8px;
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    background: transparent;
+
+    color: #aaa39f;
+
+    font-size: 11px;
+
+    transition: .2s;
+}
+
+.option-button.selected {
+    background: #bd986a;
+
+    color: #111;
+
+    border-color: #bd986a;
+}
+
+
+/* =========================
+   MODAL ADD
+========================= */
+
+.modal-add {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 0;
+
+    border-radius: 10px;
+
+    background: #c09b6c;
+
+    color: #111;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-top: auto;
+}
+
+.modal-add:disabled {
+    opacity: .35;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   CART DRAWER
+========================= */
+
+.cart-drawer {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: min(440px,94%);
+
+    height: 100%;
+
+    background: #11110f;
+
+    border-left:
+        1px solid rgba(205,169,120,.14);
+
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+
+    transform:
+        translateX(100%);
+
+    transition: .35s;
+}
+
+.overlay.open .cart-drawer {
+    transform:
+        translateX(0);
+}
+
+.cart-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 20px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.07);
+}
+
+.cart-header h2 {
+    font-size: 21px;
+}
+
+.close {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #ddd;
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    font-size: 20px;
+}
+
+.cart-items {
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 20px 0;
+}
+
+.empty {
+    text-align: center;
+
+    padding-top: 60px;
+
+    color: #6d6862;
+
+    font-size: 13px;
+}
+
+.cart-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 16px 0;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.06);
+}
+
+.cart-item h4 {
+    font-size: 13px;
+}
+
+.cart-item p {
+    color: #a88a65;
+
+    font-size: 11px;
+}
+
+.cart-item-price {
+    color: #c8a373;
+
+    font-size: 12px;
+}
+
+.quantity {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 8px;
+}
+
+.quantity button {
+    width: 27px;
+    height: 27px;
+
+    border-radius: 6px;
+
+    border:
+        1px solid rgba(255,255,255,.1);
+
+    background: #191917;
+
+    color: #ddd;
+}
+
+.cart-footer {
+    padding-top: 20px;
+
+    border-top:
+        1px solid rgba(255,255,255,.07);
+}
+
+.total {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+}
+
+.total strong {
+    color: #c8a373;
+}
+
+.checkout-button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 0;
+
+    border-radius: 9px;
+
+    background: #c09b6c;
+
+    color: #111;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   CHECKOUT
+========================= */
+
+.checkout-content {
+    overflow-y: auto;
+
+    padding-top: 25px;
+}
+
+.checkout-box {
+    background:
+        rgba(255,255,255,.025);
+
+    border:
+        1px solid rgba(205,170,120,.12);
+
+    border-radius: 18px;
+
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    color: #aaa39b;
+
+    font-size: 12px;
+
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border-radius: 9px;
+
+    border:
+        1px solid rgba(255,255,255,.09);
+
+    background: #0b0b0a;
+
+    color: #eee;
+
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color:
+        rgba(201,165,116,.40);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.order-row {
+    padding: 15px 0;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.07);
+}
+
+.order-row strong {
+    font-size: 13px;
+}
+
+.order-row span {
+    display: block;
+
+    color: #8b857d;
+
+    font-size: 11px;
+}
+
+.final-total {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-top: 20px;
+
+    margin-top: 10px;
+
+    border-top:
+        1px solid rgba(255,255,255,.08);
+}
+
+.final-total strong {
+    color: #c7a172;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        padding: 70px 0;
+    }
+
+    .products-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .about-grid,
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-gallery {
+        border-radius:
+            20px 20px 0 0;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        display: block;
+    }
+
+    .section-heading p {
+        margin-top: 12px;
+    }
+
+    .contact-box {
+        padding: 28px;
+    }
+
+    .footer {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+    .modal-content {
+        padding: 28px 22px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+<div class="container nav">
+
+<a href="#home" class="logo">
+دِلوَر
+</a>
+
+
+<nav class="nav-links">
+
+<a href="#home">خانه</a>
+
+<a href="#products">محصولات</a>
+
+<a href="#about">درباره دِلوَر</a>
+
+<a href="#contact">تماس با ما</a>
+
+</nav>
+
+
+<button
+class="cart-button"
+onclick="openCart()">
+
+سبد خرید
+
+<span id="cartCount">۰</span>
+
+</button>
+
+</div>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section
+class="hero"
+id="home">
+
+<div class="container hero-center">
+
+<span class="small-label">
+DELLVAR / WOODCRAFT
+</span>
+
+
+<h1>
+
+زیبایی طبیعی
+
+<span>
+چوب
+</span>
+
+در طراحی معاصر
+
+</h1>
+
+
+<p>
+محصولات چوبی دِلوَر با حفظ زیبایی طبیعی چوب
+و با نگاهی ساده و مدرن طراحی شده‌اند.
+</p>
+
+
+<a
+href="#products"
+class="primary-button">
+
+مشاهده محصولات
+
+</a>
+
+</div>
+
+</section>
+
+
+
+<main>
+
+
+<!-- =========================
+     PRODUCTS
+========================= -->
+
+<section
+id="products">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<div>
+
+<span class="small-label">
+COLLECTION
+</span>
+
+<h2>
+محصولات دِلوَر
+</h2>
+
+</div>
+
+
+<p>
+مجموعه‌ای از محصولات چوبی کاربردی
+با فرم ساده و طراحی مدرن.
+</p>
+
+</div>
+
+
+
+<div
+class="products-grid"
+id="productsGrid">
+</div>
+
+
+
+<div class="note">
+
+<div class="note-line"></div>
+
+<div>
+
+<h3>
+توضیحات مهم
+</h3>
+
+<p>
+با توجه به طرح طبیعی چوب ممکن است طرح روی چوب سفارش شما با عکس داخل سایت متفاوت باشد.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+<div class="container about-grid">
+
+
+<div class="about-visual">
+
+<span>
+Dellvar
+</span>
+
+</div>
+
+
+<div class="about-text">
+
+<span class="small-label">
+ABOUT DELLVAR
+</span>
+
+
+<h2>
+چوب، بدون از بین بردن
+هویت طبیعی آن
+</h2>
+
+
+<p>
+دِلوَر تلاش می‌کند محصولات چوبی را با
+طراحی ساده و امروزی ارائه کند؛ به شکلی که
+فرم محصول در کنار بافت طبیعی چوب دیده شود.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+<div class="container">
+
+
+<div class="contact-box">
+
+
+<div>
+
+<span class="small-label">
+CONTACT
+</span>
+
+
+<h2>
+تماس با Dellvar
+</h2>
+
+
+<p>
+برای سفارش یا دریافت اطلاعات بیشتر
+می‌توانید از طریق شماره تلفن یا
+صفحه اینستاگرام با ما در ارتباط باشید.
+</p>
+
+</div>
+
+
+
+<div class="contact-links">
+
+
+<a
+href="tel:09161136589"
+class="contact-link">
+
+<span class="contact-label">
+تلفن
+</span>
+
+<strong>
+۰۹۱۶۱۱۳۶۵۸۹
+</strong>
+
+</a>
+
+
+
+<a
+href="https://www.instagram.com/dell_var/"
+target="_blank"
+rel="noopener noreferrer"
+class="contact-link">
+
+<span class="contact-label">
+اینستاگرام
+</span>
+
+<strong>
+@dell_var
+</strong>
+
+</a>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="container footer">
+
+<div class="logo">
+دٍلوَر
+</div>
+
+<p>
+محصولات چوبی
+</p>
+
+<p>
+تمامی حقوق محفوظ است.
+</p>
+
+</div>
+
+</footer>
+
+
+
+<!-- =========================
+     PRODUCT MODAL
+========================= -->
+
+<div
+class="overlay"
+id="productOverlay">
+
+
+<div
+class="product-modal"
+id="productModal">
+
+
+<button
+class="modal-close"
+onclick="closeProduct()">
+
+×
+
+</button>
+
+
+<div
+class="modal-grid">
+
+
+<div class="modal-gallery">
+
+
+<img
+id="modalImage"
+src=""
+alt="">
+
+
+<button
+class="modal-gallery-button modal-prev"
+onclick="changeModalImage(1)">
+
+›
+
+</button>
+
+
+<button
+class="modal-gallery-button modal-next"
+onclick="changeModalImage(-1)">
+
+‹
+
+</button>
+
+</div>
+
+
+
+<div class="modal-content">
+
+
+<h2
+id="modalTitle">
+</h2>
+
+
+<div
+id="modalStatus">
+</div>
+
+
+<p
+class="modal-description"
+id="modalDescription">
+</p>
+
+
+<div
+class="modal-price"
+id="modalPrice">
+</div>
+
+
+<div
+id="modalOptions">
+</div>
+
+
+<button
+class="modal-add"
+id="modalAddButton"
+onclick="addSelectedProduct()">
+
+افزودن به سبد خرید
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- =========================
+     CART
+========================= -->
+
+<div
+class="overlay"
+id="cartOverlay">
+
+
+<div class="cart-drawer">
+
+
+<div class="cart-header">
+
+<h2>
+سبد خرید
+</h2>
+
+
+<button
+class="close"
+onclick="closeCart()">
+
+×
+
+</button>
+
+</div>
+
+
+
+<div
+class="cart-items"
+id="cartItems">
+</div>
+
+
+
+<div class="cart-footer">
+
+
+<div class="total">
+
+<span>
+مبلغ کل
+</span>
+
+
+<strong
+id="cartTotal">
+
+۰ تومان
+
+</strong>
+
+</div>
+
+
+
+<button
+class="checkout-button"
+onclick="showCheckout()">
+
+ادامه فرایند خرید
+
+</button>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<!-- =========================
+     CHECKOUT
+========================= -->
+
+<div
+class="overlay"
+id="checkoutOverlay">
+
+
+<div
+class="cart-drawer"
+style="width:min(650px,95%);">
+
+
+<div class="cart-header">
+
+<h2>
+تکمیل سفارش
+</h2>
+
+
+<button
+class="close"
+onclick="closeCheckout()">
+
+×
+
+</button>
+
+</div>
+
+
+
+<div class="checkout-content">
+
+
+<div class="checkout-box">
+
+
+<h3>
+اطلاعات خریدار
+</h3>
+
+
+<div class="form-group">
+
+<label>
+نام و نام خانوادگی
+</label>
+
+<input
+type="text"
+id="customerName"
+placeholder="نام و نام خانوادگی">
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+شماره موبایل
+</label>
+
+<input
+type="tel"
+id="customerPhone"
+placeholder="شماره موبایل">
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+آدرس
+</label>
+
+<textarea
+id="customerAddress"
+rows="4"
+placeholder="آدرس کامل"></textarea>
+
+</div>
+
+
+
+<h3
+style="margin-top:30px;">
+
+خلاصه سفارش
+
+</h3>
+
+
+
+<div
+id="checkoutItems">
+</div>
+
+
+
+<div class="final-total">
+
+<span>
+مبلغ نهایی
+</span>
+
+
+<strong
+id="checkoutTotal">
+
+۰ تومان
+
+</strong>
+
+</div>
+
+
+
+<button
+class="checkout-button"
+style="margin-top:25px;"
+onclick="processPayment()">
+
+ادامه به پرداخت
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
+
+const products = [
+
+{
+    id: 1,
+    name: "شکلات‌خوری پایه‌دار",
+    description: "موجود در رنگ تیره.",
+    price: 1950000,
+    available: true,
+    images: [
+        "product1-1.jpg",
+        "product1-2.jpg"
+    ]
+},
+
+{
+    id: 2,
+    name: "جا خودکاری / جای قاشق و چنگال",
+    description: "موجود در دو رنگ روشن و تیره. قابل سفارش با پایه و بدون پایه.",
+    price: 700000,
+    available: true,
+    images: [
+        "product2-1.jpg",
+        "product2-2.jpg",
+        "product2-3.jpg"
+    ],
+    options: [
+        {
+            name: "با پایه",
+            price: 780000
+        },
+        {
+            name: "بدون پایه",
+            price: 700000
+        }
+    ]
+},
+
+{
+    id: 3,
+    name: "وردنه",
+    description: "موجود در دو رنگ روشن و تیره.",
+    price: 890000,
+    available: true,
+    images: [
+        "product3-1.jpg",
+        "product3-2.jpg"
+    ]
+},
+
+{
+    id: 4,
+    name: "ظرف چوبی",
+    description: "مناسب برای سرو تنقلات، آجیل، شکلات و موارد دیگر.",
+    price: 1450000,
+    available: true,
+    images: [
+        "product4-1.jpg",
+        "product4-2.jpg",
+        "product4-3.jpg"
+    ]
+},
+
+{
+    id: 5,
+    name: "آباژور",
+    description: "ارتفاع ۱۶۰ سانتی‌متر. موجودی ۱ عدد.",
+    price: 4300000,
+    available: true,
+    images: [
+        "product5-1.jpg"
+    ]
+},
+
+{
+    id: 6,
+    name: "شمعدان",
+    description: "موجود در رنگ تیره. قیمت هر عدد ۳۵۰٬۰۰۰ تومان و قیمت هر دو باهم ۶۰۰٬۰۰۰ تومان.",
+    price: 600000,
+    available: true,
+    images: [
+        "product6-1.jpg",
+        "product6-2.jpg"
+    ],
+    options: [
+        {
+            name: "یک عدد",
+            price: 350000
+        },
+        {
+            name: "دو عدد",
+            price: 600000
+        }
+    ]
+},
+
+{
+    id: 7,
+    name: "آباژور رومیزی",
+    description: "موجود در سه رنگ زرد، گلبهی و سرمه‌ای.",
+    price: 1400000,
+    available: true,
+    images: [
+        "product7-1.jpg",
+        "product7-2.jpg",
+        "product7-3.jpg"
+    ],
+    options: [
+        {
+            name: "زرد",
+            price: 1400000,
+            imageIndex: 0
+        },
+        {
+            name: "گلبهی",
+            price: 1400000,
+            imageIndex: 1
+        },
+        {
+            name: "سرمه‌ای",
+            price: 1400000,
+            imageIndex: 2
+        }
+    ]
+},
+
+{
+    id: 8,
+    name: "گلدان",
+    description: "موجود در رنگ‌های تیره و روشن.",
+    price: 790000,
+    available: true,
+    images: [
+        "product8-1.jpg",
+        "product8-2.jpg",
+        "product8-3.jpg",
+        "product8-4.jpg"
+    ],
+    options: [
+        {
+            name: "تیره",
+            price: 790000
+        },
+        {
+            name: "روشن",
+            price: 790000
+        }
+    ]
+},
+
+{
+    id: 9,
+    name: "ظرف دو طبقه",
+    description: "مناسب برای سرو میوه و شیرینی.",
+    price: 2850000,
+    available: true,
+    images: [
+        "product9-1.jpg",
+        "product9-2.jpg",
+        "product9-3.jpg"
+    ]
+},
+
+{
+    id: 10,
+    name: "ست چهار تایی کاسه چوبی",
+    description: "ست چهار عددی کاسه چوبی.",
+    price: 1200000,
+    available: true,
+    images: [
+        "product10-1.jpg"
+    ]
+},
+
+{
+    id: 11,
+    name: "سطل زباله و جا دستمالی",
+    description: "امکان خرید به صورت ست یا جداگانه.",
+    price: 2400000,
+    available: true,
+    images: [
+        "product11-1.jpg"
+    ],
+    options: [
+        {
+            name: "ست",
+            price: 2400000
+        },
+        {
+            name: "جا دستمالی جدا",
+            price: 780000
+        },
+        {
+            name: "سطل زباله جدا",
+            price: 1700000
+        }
+    ]
+},
+
+{
+    id: 12,
+    name: "بشقاب چوبی",
+    description: "این محصول در حال حاضر ناموجود است.",
+    price: 370000,
+    available: false,
+    images: [
+        "product12-1.jpg",
+        "product12-2.jpg",
+        "product12-3.jpg"
+    ]
+}
+
+];
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+let cart = [];
+let currentProduct = null;
+let currentImageIndex = 0;
+let selectedOption = null;
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+function formatPrice(price) {
+
+    return price.toLocaleString("fa-IR") + " تومان";
+
+}
+
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
+
+function renderProducts() {
+
+    const grid =
+        document.getElementById("productsGrid");
+
+    grid.innerHTML = "";
+
+    products.forEach(product => {
+
+        const card =
+            document.createElement("article");
+
+        card.className =
+            "product-card";
+
+        const status =
+            product.available
+            ? `
+                <span class="status available">
+                    موجود
+                </span>
+              `
+            : `
+                <span class="status unavailable">
+                    ناموجود
+                </span>
+              `;
+
+        card.innerHTML = `
+
+            <div class="product-image">
+
+                <img
+                    src="${product.images[0]}"
+                    alt="${product.name}"
+                    onerror="
+                        this.style.display='none';
+                        this.nextElementSibling.style.display='flex';
+                    "
+                >
+
+                <div
+                    class="image-placeholder"
+                    style="display:none;"
+                >
+                    تصویر محصول
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    ${product.name}
+                </h3>
+
+                ${status}
+
+                <p class="product-description">
+                    ${product.description}
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong class="price">
+                        ${formatPrice(product.price)}
+                    </strong>
+
+                    <button
+                        class="view-button"
+                        type="button"
+                    >
+                        مشاهده محصول
+                    </button>
+
+                </div>
+
+            </div>
+        `;
+
+        card.addEventListener(
+            "click",
+            () => openProduct(product.id)
+        );
+
+        grid.appendChild(card);
+
+    });
+
+}
+
+
+/* =========================================================
+   OPEN PRODUCT
+========================================================= */
+
+function openProduct(productId) {
+
+    const product =
+        products.find(
+            item => item.id === productId
+        );
+
+    if (!product) return;
+
+    currentProduct = product;
+
+    currentImageIndex = 0;
+
+    selectedOption =
+        product.options
+        ? product.options[0]
+        : null;
+
+    document.getElementById(
+        "modalTitle"
+    ).textContent =
+        product.name;
+
+    document.getElementById(
+        "modalDescription"
+    ).textContent =
+        product.description;
+
+    document.getElementById(
+        "modalPrice"
+    ).textContent =
+        formatPrice(
+            selectedOption
+            ? selectedOption.price
+            : product.price
+        );
+
+    document.getElementById(
+        "modalImage"
+    ).src =
+        product.images[0];
+
+    renderModalStatus();
+
+    renderModalOptions();
+
+    updateModalImage();
+
+    document
+        .getElementById("productOverlay")
+        .classList.add("open");
+
+    document.body.style.overflow =
+        "hidden";
+
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+function renderModalStatus() {
+
+    const element =
+        document.getElementById(
+            "modalStatus"
+        );
+
+    if (!currentProduct.available) {
+
+        element.innerHTML = `
+            <span class="status unavailable">
+                ناموجود
+            </span>
+        `;
+
+        document.getElementById(
+            "modalAddButton"
+        ).disabled = true;
+
+        return;
+    }
+
+    element.innerHTML = `
+        <span class="status available">
+            موجود
+        </span>
+    `;
+
+    document.getElementById(
+        "modalAddButton"
+    ).disabled = false;
+
+}
+
+
+/* =========================================================
+   OPTIONS
+========================================================= */
+
+function renderModalOptions() {
+
+    const container =
+        document.getElementById(
+            "modalOptions"
+        );
+
+    container.innerHTML = "";
+
+    if (
+        !currentProduct.options ||
+        currentProduct.options.length === 0
+    ) {
+        return;
+    }
+
+    const title =
+        document.createElement("div");
+
+    title.className =
+        "option-title";
+
+    title.textContent =
+        "انتخاب گزینه";
+
+    container.appendChild(title);
+
+    const options =
+        document.createElement("div");
+
+    options.className =
+        "options";
+
+    currentProduct.options.forEach(
+        (option,index) => {
+
+            const button =
+                document.createElement("button");
+
+            button.type =
+                "button";
+
+            button.className =
+                "option-button";
+
+            if (index === 0) {
+                button.classList.add(
+                    "selected"
+                );
+            }
+
+            button.textContent =
+                option.name;
+
+            button.addEventListener(
+                "click",
+                function(event) {
+
+                    event.stopPropagation();
+
+                    selectOption(
+                        option,
+                        button
+                    );
+
+                }
+            );
+
+            options.appendChild(button);
+
+        }
+    );
+
+    container.appendChild(options);
+
+}
+
+
+/* =========================================================
+   SELECT OPTION
+========================================================= */
+
+function selectOption(
+    option,
+    button
+) {
+
+    selectedOption =
+        option;
+
+    const buttons =
+        document.querySelectorAll(
+            "#modalOptions .option-button"
+        );
+
+    buttons.forEach(btn => {
+
+        btn.classList.remove(
+            "selected"
+        );
+
+    });
+
+    button.classList.add(
+        "selected"
+    );
+
+    document.getElementById(
+        "modalPrice"
+    ).textContent =
+        formatPrice(
+            option.price
+        );
+
+    if (
+        typeof option.imageIndex ===
+        "number"
+    ) {
+
+        currentImageIndex =
+            option.imageIndex;
+
+        updateModalImage();
+
+    }
+
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+function updateModalImage() {
+
+    if (!currentProduct) return;
+
+    const image =
+        currentProduct.images[
+            currentImageIndex
+        ];
+
+    document.getElementById(
+        "modalImage"
+    ).src =
+        image;
+
+}
+
+
+/* =========================================================
+   CHANGE IMAGE
+========================================================= */
+
+function changeModalImage(
+    direction
+) {
+
+    if (!currentProduct) return;
+
+    const total =
+        currentProduct.images.length;
+
+    currentImageIndex +=
+        direction;
+
+    if (
+        currentImageIndex < 0
+    ) {
+        currentImageIndex =
+            total - 1;
+    }
+
+    if (
+        currentImageIndex >= total
+    ) {
+        currentImageIndex = 0;
+    }
+
+    updateModalImage();
+
+}
+
+
+/* =========================================================
+   CLOSE PRODUCT
+========================================================= */
+
+function closeProduct() {
+
+    document
+        .getElementById(
+            "productOverlay"
+        )
+        .classList.remove("open");
+
+    document.body.style.overflow =
+        "";
+
+}
+
+
+/* =========================================================
+   ADD TO CART
+========================================================= */
+
+function addSelectedProduct() {
+
+    if (!currentProduct) return;
+
+    if (!currentProduct.available) return;
+
+    const option =
+        selectedOption;
+
+    const itemId =
+        option
+        ? `${currentProduct.id}-${option.name}`
+        : `${currentProduct.id}`;
+
+    const existing =
+        cart.find(
+            item =>
+                item.itemId === itemId
+        );
+
+    if (existing) {
+
+        existing.quantity++;
+
+    } else {
+
+        cart.push({
+
+            itemId: itemId,
+
+            id: currentProduct.id,
+
+            name: currentProduct.name,
+
+            option:
+                option
+                ? option.name
+                : "",
+
+            price:
+                option
+                ? option.price
+                : currentProduct.price,
+
+            quantity: 1
+
+        });
+
+    }
+
+    saveCart();
+
+    renderCart();
+
+    closeProduct();
+
+    openCart();
+
+}
+
+
+/* =========================================================
+   CART
+========================================================= */
+
+function renderCart() {
+
+    const container =
+        document.getElementById(
+            "cartItems"
+        );
+
+    const count =
+        document.getElementById(
+            "cartCount"
+        );
+
+    const totalElement =
+        document.getElementById(
+            "cartTotal"
+        );
+
+    if (cart.length === 0) {
+
+        container.innerHTML = `
+            <div class="empty">
+                سبد خرید شما خالی است.
+            </div>
+        `;
+
+    } else {
+
+        container.innerHTML =
+            cart.map(item => `
+
+                <div class="cart-item">
+
+                    <div>
+
+                        <h4>
+                            ${item.name}
+                        </h4>
+
+                        ${
+                            item.option
+                            ? `
+                                <p>
+                                    ${item.option}
+                                </p>
+                              `
+                            : ""
+                        }
+
+                        <p>
+                            ${formatPrice(item.price)}
+                        </p>
+
+                        <div class="quantity">
+
+                            <button
+                                onclick="
+                                    changeQuantity(
+                                        '${item.itemId}',
+                                        1
+                                    )
+                                "
+                            >
+                                +
+                            </button>
+
+                            <span>
+                                ${item.quantity}
+                            </span>
+
+                            <button
+                                onclick="
+                                    changeQuantity(
+                                        '${item.itemId}',
+                                        -1
+                                    )
+                                "
+                            >
+                                −
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <strong class="cart-item-price">
+
+                        ${formatPrice(
+                            item.price *
+                            item.quantity
+                        )}
+
+                    </strong>
+
+                </div>
+
+            `).join("");
+
+    }
+
+    const totalCount =
+        cart.reduce(
+            (sum,item) =>
+                sum + item.quantity,
+            0
+        );
+
+    const total =
+        cart.reduce(
+            (sum,item) =>
+                sum +
+                (
+                    item.price *
+                    item.quantity
+                ),
+            0
+        );
+
+    count.textContent =
+        totalCount.toLocaleString(
+            "fa-IR"
+        );
+
+    totalElement.textContent =
+        formatPrice(total);
+
+}
+
+
+/* =========================================================
+   QUANTITY
+========================================================= */
+
+function changeQuantity(
+    itemId,
+    amount
+) {
+
+    const item =
+        cart.find(
+            product =>
+                product.itemId === itemId
+        );
+
+    if (!item) return;
+
+    item.quantity += amount;
+
+    if (item.quantity <= 0) {
+
+        cart =
+            cart.filter(
+                product =>
+                    product.itemId !== itemId
+            );
+
+    }
+
+    saveCart();
+
+    renderCart();
+
+}
+
+
+/* =========================================================
+   STORAGE
+========================================================= */
+
+function saveCart() {
+
+    localStorage.setItem(
+        "dellvarCart",
+        JSON.stringify(cart)
+    );
+
+}
+
+function loadCart() {
+
+    const saved =
+        localStorage.getItem(
+            "dellvarCart"
+        );
+
+    if (!saved) return;
+
+    try {
+
+        cart =
+            JSON.parse(saved);
+
+    } catch {
+
+        cart = [];
+
+    }
+
+}
+
+
+/* =========================================================
+   CART OPEN/CLOSE
+========================================================= */
+
+function openCart() {
+
+    renderCart();
+
+    document
+        .getElementById(
+            "cartOverlay"
+        )
+        .classList.add("open");
+
+    document.body.style.overflow =
+        "hidden";
+
+}
+
+function closeCart() {
+
+    document
+        .getElementById(
+            "cartOverlay"
+        )
+        .classList.remove("open");
+
+    document.body.style.overflow =
+        "";
+
+}
+
+
+/* =========================================================
+   CHECKOUT
+========================================================= */
+
+function showCheckout() {
+
+    if (cart.length === 0) {
+
+        alert(
+            "سبد خرید شما خالی است."
+        );
+
+        return;
+
+    }
+
+    renderCheckout();
+
+    closeCart();
+
+    document
+        .getElementById(
+            "checkoutOverlay"
+        )
+        .classList.add("open");
+
+}
+
+
+function closeCheckout() {
+
+    document
+        .getElementById(
+            "checkoutOverlay"
+        )
+        .classList.remove("open");
+
+    document.body.style.overflow =
+        "";
+
+}
+
+
+/* =========================================================
+   CHECKOUT RENDER
+========================================================= */
+
+function renderCheckout() {
+
+    const container =
+        document.getElementById(
+            "checkoutItems"
+        );
+
+    const totalElement =
+        document.getElementById(
+            "checkoutTotal"
+        );
+
+    let total = 0;
+
+    container.innerHTML =
+        cart.map(item => {
+
+            const itemTotal =
+                item.price *
+                item.quantity;
+
+            total += itemTotal;
+
+            return `
+
+                <div class="order-row">
+
+                    <strong>
+                        ${item.name}
+                    </strong>
+
+                    ${
+                        item.option
+                        ? `
+                            <span>
+                                ${item.option}
+                            </span>
+                          `
+                        : ""
+                    }
+
+                    <span>
+                        تعداد:
+                        ${item.quantity}
+                    </span>
+
+                    <span
+                        style="color:#c7a172;"
+                    >
+                        ${formatPrice(
+                            itemTotal
+                        )}
+                    </span>
+
+                </div>
+
+            `;
+
+        }).join("");
+
+    totalElement.textContent =
+        formatPrice(total);
+
+}
+
+
+/* =========================================================
+   PAYMENT
+========================================================= */
+
+function processPayment() {
+
+    const name =
+        document
+            .getElementById(
+                "customerName"
+            )
+            .value
+            .trim();
+
+    const phone =
+        document
+            .getElementById(
+                "customerPhone"
+            )
+            .value
+            .trim();
+
+    const address =
+        document
+            .getElementById(
+                "customerAddress"
+            )
+            .value
+            .trim();
+
+    if (!name) {
+
+        alert(
+            "لطفاً نام و نام خانوادگی را وارد کنید."
+        );
+
+        return;
+
+    }
+
+    if (!phone) {
+
+        alert(
+            "لطفاً شماره موبایل را وارد کنید."
+        );
+
+        return;
+
+    }
+
+    if (!address) {
+
+        alert(
+            "لطفاً آدرس را وارد کنید."
+        );
+
+        return;
+
+    }
+
+    /*
+      درگاه پرداخت واقعی در این قسمت
+      باید به سرویس پرداخت متصل شود.
+
+      برای کسر واقعی پول از مشتری،
+      فقط HTML/JavaScript کافی نیست و
+      نیاز به درگاه پرداخت و بخش سرور
+      برای ایجاد و تأیید تراکنش وجود دارد.
+    */
+
+    alert(
+        "اطلاعات سفارش ثبت شد. اتصال درگاه پرداخت واقعی باید در مرحله بعد انجام شود."
+    );
+
+}
+
+
+/* =========================================================
+   OVERLAY CLICK
+========================================================= */
+
+document
+    .getElementById(
+        "productOverlay"
+    )
+    .addEventListener(
+        "click",
+        function(event) {
+
+            if (
+                event.target === this
+            ) {
+                closeProduct();
+            }
+
+        }
+    );
+
+
+document
+    .getElementById(
+        "cartOverlay"
+    )
+    .addEventListener(
+        "click",
+        function(event) {
+
+            if (
+                event.target === this
+            ) {
+                closeCart();
+            }
+
+        }
+    );
+
+
+document
+    .getElementById(
+        "checkoutOverlay"
+    )
+    .addEventListener(
+        "click",
+        function(event) {
+
+            if (
+                event.target === this
+            ) {
+                closeCheckout();
+            }
+
+        }
+    );
+
+
+/* =========================================================
+   START
+========================================================= */
+
+loadCart();
+
+renderProducts();
+
+renderCart();
+
+</script>
+
+</body>
+</html>
+
